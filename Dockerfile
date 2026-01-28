@@ -9,7 +9,7 @@ RUN \
 RUN ./rclone version
 
 # Begin final image
-FROM alpine:latest
+FROM alpine:3.23.3
 
 RUN apk --no-cache add ca-certificates fuse3 tzdata && \
   echo "user_allow_other" >> /etc/fuse.conf
